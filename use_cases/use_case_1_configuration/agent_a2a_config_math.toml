@@ -1,0 +1,40 @@
+#################################################################
+# Config for A2A Agent, that can embed a MCP agent
+#################################################################
+
+#################################################################
+# General parameters
+#################################################################
+agent_a2a_name="Math Calculation Agent"
+agent_a2a_host="127.0.0.1"
+agent_a2a_http_port="8084"
+# Future use. Websocket is not supported
+agent_a2a_ws_port="8085"
+
+#################################################################
+# Purpose and high level skills
+# The agent will use the A2A protocol for his interactions
+#################################################################
+agent_a2a_system_prompt="You are a specialized agent capable of performing a wide range of mathematical calculations."
+agent_a2a_skill_id="mathematical_calculations"
+agent_a2a_skill_name="Mathematics and Arithmetic Operations"
+agent_a2a_skill_description="Performs various mathematical calculations, including arithmetic, algebra, and basic calculus."
+agent_a2a_version="1.0.0"
+agent_a2a_description="An agent designed for accurate and efficient mathematical problem-solving."
+agent_a2a_doc_url="/docs/math"
+agent_a2a_tags=["mathematics","calculation","arithmetic","algebra","geometry","calculus"]
+agent_a2a_examples=["What is 123 * 456?","Solve for x: 2x + 5 = 15","Calculate the area of a circle with radius 7","What is the square root of 144?"]
+
+#################################################################
+# Define her the url of openai compatible endpoint
+# as well as the model to use
+#################################################################
+# These set of parameters declares the LLM that the agent will connect to
+agent_a2a_model_id="gemini-2.0-flash"
+agent_a2a_llm_url="https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+
+#################################################################
+# You can say the agent to include a MCP runtime agent
+# you just define the configuration file to use
+#################################################################
+# agent_a2a_mcp_config_path="configuration/agent_mcp_math_config.toml"
